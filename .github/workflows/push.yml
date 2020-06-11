@@ -16,3 +16,4 @@ jobs:
       run: echo "${{ secrets.REGISTRY_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
     - name: Push to GitHub Package Registry
       run: make push VERSION=${{ env.RELEASE_VERSION }}
+
